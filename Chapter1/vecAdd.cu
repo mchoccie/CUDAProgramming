@@ -1,3 +1,6 @@
+//__global__ means that this function will run on the GPU
+//__device__ means that this function will run on the GPU
+//__host__ means that this function will run on the CPU
 __global___ void vecAddKernel(float * A, float * B, float * c, int n){
     int i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i < n) {
